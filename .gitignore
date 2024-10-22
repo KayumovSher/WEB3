@@ -1,0 +1,11 @@
+# Ignore virtual environments
+venv/
+
+# Ignore environment variable file
+.env
+# Logs and databases
+*.log
+*.sqlite3
+# IDE settings (optional)
+.vscode/
+.idea/
