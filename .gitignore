@@ -9,3 +9,5 @@ venv/
 # IDE settings (optional)
 .vscode/
 .idea/
+
+.venv/
