@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Navbar, Container, Form, Row, Col } from 'react-bootstrap';
 
-function App() {
+import ProTouchIco from "./images/ProTouchIco.jpg"
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <html className="dark">
+      <header>
+        <Navbar className="bg-body-tertiary">
+          <Container>
+            <Navbar.Brand href="#home">
+              <img
+                alt=""
+                src="{ProTouchIco}"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}
+              ProTouch
+            </Navbar.Brand>
+            <Form inline>
+              <Row>
+                <Col xs="auto">
+                  <Form.Control
+                    type="text"
+                    placeholder="Search"
+                    className=" mr-sm-2"
+                  />
+                </Col>
+                <Col xs="auto">
+                  <Button type="submit">Submit</Button>
+                </Col>
+              </Row>
+            </Form>
+          </Container>
+        </Navbar>
       </header>
-    </div>
-  );
+
+      <body>
+        <div className="App">
+          <h1 className="text-3xl font-bold underline">
+            Hello world!
+          </h1>
+          <div class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+          </div>
+        </div>
+      </body>
+    </html >
+  )
 }
 
-export default App;
