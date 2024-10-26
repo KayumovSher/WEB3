@@ -1,10 +1,14 @@
+// craco.config.js
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 module.exports = {
-    style: {
-      postcss: {
-        plugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
-        ],
+  // other configurations...
+  plugins: [
+    {
+      plugin: ESLintPlugin,
+      options: {
+        extensions: ['js', 'jsx', 'ts', 'tsx'], // Include any other file types you want to lint
       },
     },
-  }
+  ],
+};

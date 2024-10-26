@@ -1,15 +1,10 @@
-const { darkMode } = require('tailwindcss/stubs/defaultConfig.stub');
-
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
-  darkMode: ['selector', '[data-mode="dark"]'],
-
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Adjust paths as needed
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-
-}
+};
