@@ -22,6 +22,10 @@ export default function Body() {
 
             console.log(res);
 
+            if(Array.isArray(res.products) && res.products.length) {
+                setData(res.products);
+            };
+
         } catch (err) {
             setIsError(true);
         } finally {
