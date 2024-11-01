@@ -48,9 +48,7 @@ export default function Navbar() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0 items-center"></div>
-            {/* Scrollable navbar container */}
-            <div className="hidden sm:block overflow-x-auto whitespace-nowrap">
+            <div className="hidden sm:block overflow-x-auto whitespace-nowrap w-full">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <a
@@ -59,7 +57,7 @@ export default function Navbar() {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-2 py-1 text-[10px] font-small flex items-center space-x-1'
+                      'rounded-md px-2 py-1 text-[12px] font-small flex items-center space-x-1'
                     )}
                   >
                     <img src={item.icons} alt={`${item.name} icon`} className="h-4 w-4" />
@@ -92,5 +90,6 @@ export default function Navbar() {
       </DisclosurePanel>
     </Disclosure>
   );
+
 }
 
