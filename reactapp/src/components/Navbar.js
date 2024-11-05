@@ -1,6 +1,5 @@
 import React from 'react';
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Disclosure } from '@headlessui/react';
 
 // Import your icons
 import tablemonIcon from "./images/icons/tablemon.png";
@@ -34,35 +33,31 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-sky-200 fixed top-0 left-0 w-full z-50">
-  <div className="mx-auto max-w-7xl px-1 sm:px-5 lg:px-8">
-    <div className="relative flex h-16 items-center justify-between">
-      {/* Main Navbar items, scrollable horizontally */}
-      <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div className="flex-shrink-0 items-center"></div>
-        {/* Horizontal scroll container */}
-        <div className="overflow-x-auto w-full whitespace-nowrap">
-          <div className="flex space-x-4">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                aria-current={item.current ? 'page' : undefined}
-                className={classNames(
-                  item.current ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
-                  'rounded-md px-2 py-2 text-[15px] font-small flex items-center space-x-0.5'
-                )}
-              >
-                <img src={item.icons} alt={`${item.name} icon`} className="h-4 w-4" />
-                <span>{item.name}</span>
-              </a>
-            ))}
-          </div>
+    <Disclosure as="nav" className="bg-sky-300 fixed top-0 left-0 w-full z-50">
+      <div className="mx-auto max-w-7xl px-1 sm:px-5 lg:px-8">
+        <div className="relative flex h-12 items-center justify-between">
+            {/* Horizontal scroll container */}
+            <div className="overflow-x-auto w-full whitespace-nowrap">
+              <div className="flex space-m-0.5">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    aria-current={item.current ? 'page' : undefined}
+                    className={classNames(
+                      item.current ? 'bg-gray-500 text-white' : 'text-sky-900 hover:bg-sky-700 hover:text-white',
+                      'rounded-md px-5 py-1 text-[13px] font-small flex items-center space-x-0.5'
+                    )}
+                  >
+                    <img src={item.icons} alt={`${item.name} icon`} className="h-4 w-4" />
+                    <span>{item.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
         </div>
       </div>
-    </div>
-  </div>
-</Disclosure>
+    </Disclosure>
   );
 
 }
