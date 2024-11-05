@@ -730,21 +730,21 @@ const products = [
 
 function App() {
   return (
-    <div className="bg-sky-50 w-full overflow-hidden">
+    <div className="bg-white w-full overflow-hidden">
       {/* Render Navbar at the top */}
       <Navbar />
 
       {/* Main Content */}
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 w-full">
-        <h5 className="text-0.5xl text-red-500 text-center">Ushbu sayt hozirda test holatida ishlamoqda!</h5>
-        <h2 className="text-2xl font-bold tracking-tight text-gray-500">ПРОДУКТЫ</h2>
+        <h5 style={{fontFamily: 'The Youngest Serif'}} className="text-0.5xl text-red-500 text-center">Ushbu sayt hozirda test holatida ishlamoqda!</h5>
+        <h2 style={{fontFamily: 'The Youngest Serif'}} className="text-2xl font-bold tracking-tight text-gray-500">ПРОДУКТЫ</h2>
 
         {/* Grid setup to ensure two columns on smaller screens */}
         <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 w-full">
           {products.map((product) => (
             <div key={product.id} className="group relative">
               {/* Product image */}
-              <a href={product.href} target="_blank" rel="noopener noreferrer">
+              <a style={{fontFamily: 'The Youngest Serif'}} href={product.href} target="_blank" rel="noopener noreferrer">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <img
                     alt={product.imageAlt}
@@ -757,21 +757,22 @@ function App() {
               {/* Product details */}
               <div className="mt-4 flex justify-between">
                 <div className="w-full">
-                  <h1 className="text-medium text-gray-700">
-                    <a href={product.href} target="_blank" rel="noopener noreferrer">
+                  <h1 style={{fontFamily: 'The Youngest Serif'}} className="text-medium text-gray-700">
+                    <a style={{fontFamily: 'The Youngest Serif'}} href={product.href} target="_blank" rel="noopener noreferrer">
                       {product.name}
                     </a>
                   </h1>
-                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p style={{fontFamily: 'The Youngest Serif'}} className="text-sm font-medium text-gray-900">{product.price}</p>
+                  <p style={{fontFamily: 'The Youngest Serif'}} className="mt-1 text-sm text-gray-500">{product.color}</p>
 
                   {/* Order button for Telegram */}
                   <button
                     onClick={() => window.open("https://t.me/Protouch_office", "_blank")}
-                    className="flex items-center space-x-1 bg-blue-500 text-white px-1 py-1 rounded hover:bg-blue-600 mt-2 text-[14px]"
+                    className="flex items-center space-x-1 text-white px-1 py-1 rounded hover:bg-blue-600 mt-2 text-[12px]"
+                    style={{backgroundColor: '#4594ed'}}
                   >
                     <img src={basket} alt="Basket icon" className="h-4 w-4" />
-                    <span>ЗАКАЗАТЬ</span>
+                    <span style={{fontFamily: 'The Youngest Serif'}}>ЗАКАЗАТЬ</span>
                   </button>
                 </div>
               </div>

@@ -33,7 +33,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-sky-300 fixed top-0 left-0 w-full z-50">
+    <Disclosure as="nav" className=" fixed top-0 left-0 w-full z-50" style={{ backgroundColor: '#2e85e6' }}>
       <div className="mx-auto max-w-7xl px-1 sm:px-5 lg:px-8">
         <div className="relative flex h-12 items-center justify-between">
             {/* Horizontal scroll container */}
@@ -41,16 +41,17 @@ export default function Navbar() {
               <div className="flex space-m-0.5">
                 {navigation.map((item) => (
                   <a
+                  style={{fontFamily: 'The Youngest Serif'}}
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-500 text-white' : 'text-sky-900 hover:bg-sky-700 hover:text-white',
-                      'rounded-md px-5 py-1 text-[13px] font-small flex items-center space-x-0.5'
+                      item.current ? 'bg-white text-white' : 'text-sky-50 hover:bg-sky-700 hover:text-white',
+                      'rounded-md px-5 py-1 text-[14px] font-small flex items-center space-x-0.5'
                     )}
                   >
                     <img src={item.icons} alt={`${item.name} icon`} className="h-4 w-4" />
-                    <span>{item.name}</span>
+                    <span style={{fontFamily: 'The Youngest Serif'}}>{item.name}</span>
                   </a>
                 ))}
               </div>
