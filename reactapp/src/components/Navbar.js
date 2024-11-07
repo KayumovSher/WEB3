@@ -47,7 +47,7 @@ export default function Navbar() {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-white text-white' : 'text-sky-50 hover:bg-sky-700 hover:text-white',
-                      'rounded-md px-5 py-1 text-[14px] font-small flex items-center space-x-0.5'
+                      'rounded-md px-5 py-1 text-[15px] font-small flex items-center space-x-0.5'
                     )}
                   >
                     <img src={item.icons} alt={`${item.name} icon`} className="h-4 w-4" />
