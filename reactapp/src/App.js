@@ -772,7 +772,7 @@ function App() {
                     style={{backgroundColor: '#4594ed'}}
                   >
                     <img src={basket} alt="Basket icon" className="h-4 w-4" />
-                    <span style={{fontFamily: 'The Youngest Serif'}}>ЗАКАЗАТЬ</span>
+                    <span style={{fontFamily: 'The Youngest Serif'}}>ЗАКАЗАТЬ menya</span>
                   </button>
                 </div>
               </div>
